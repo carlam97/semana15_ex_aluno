@@ -20,6 +20,39 @@ public class Aluno{
         }
     }
 
+    public Aluno(double nota1, double nota2, double nota3){
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.nota3 = nota3;
+    }
+
+    public Aluno(String disciplina, double nota1, double nota2, double nota3) {
+        this.disciplina = disciplina;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.nota3 = nota3;
+    }
+
+
+    public Aluno(double nota1, double nota2, double nota3, String disciplina) {
+        this.disciplina = disciplina;
+        this.nota1 = nota1;
+        this.nota2 = nota2;
+        this.nota3 = nota3;
+    }
+
+    public Aluno(){}
+
+    public void aprovado2(){
+        if(nota1 >= 7 && nota2 >= 7 && nota3 >= 7){
+            System.out.println("Aprovado");
+            System.out.println(disciplina);
+        }
+        else{
+            System.out.println("Reprovado");
+            System.out.println(disciplina);
+        }
+    }
 
     public String getNome() {
         return nome;
